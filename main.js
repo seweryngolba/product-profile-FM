@@ -5,6 +5,9 @@ const overlay = document.querySelector(".overlay");
 const plus = document.querySelector(".plus");
 const minus = document.querySelector(".minus");
 const productQuantity = document.querySelector(".product-quanitity");
+const addBtn = document.querySelector(".add-button");
+const cart = document.querySelector(".cart");
+const cartProducts = document.querySelector(".cart-products");
 
 hamburgerMenu.addEventListener("click", () => {
   mobileMenu.style.display = "flex";
@@ -27,5 +30,14 @@ minus.addEventListener("click", () => {
   if (counter > 0) {
     counter--;
     productQuantity.textContent = counter;
+  }
+});
+
+addBtn.addEventListener("click", () => {
+  if (counter === 0) {
+    cartProducts.style.display = "none";
+  } else {
+    cartProducts.style.display = "block";
+    cartProducts.textContent = counter;
   }
 });

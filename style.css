@@ -213,6 +213,22 @@ body {
   filter: brightness(0) invert(1);
 }
 
+.cart {
+  position: relative;
+}
+
+.cart-products {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  padding: 0px 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  display: none;
+}
+
 @media screen and (min-width: 1044px) {
   .navigation {
     width: 1200px;
