@@ -8,6 +8,7 @@ const productQuantity = document.querySelector(".product-quanitity");
 const addBtn = document.querySelector(".add-button");
 const cart = document.querySelector(".cart");
 const cartProducts = document.querySelector(".cart-products");
+const cartDisplay = document.querySelector(".cart-display");
 
 hamburgerMenu.addEventListener("click", () => {
   mobileMenu.style.display = "flex";
@@ -39,5 +40,13 @@ addBtn.addEventListener("click", () => {
   } else {
     cartProducts.style.display = "block";
     cartProducts.textContent = counter;
+  }
+});
+
+cart.addEventListener("click", () => {
+  if (cartDisplay.style.display === "flex") {
+    cartDisplay.style.display = "none";
+  } else {
+    cartDisplay.style.display = "flex";
   }
 });
