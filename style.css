@@ -232,7 +232,7 @@ body {
 .cart-display {
   width: 360px;
   height: 240px;
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 5px;
   border-radius: 10px;

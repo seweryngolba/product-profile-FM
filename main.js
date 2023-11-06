@@ -12,6 +12,9 @@ const cartDisplay = document.querySelector(".cart-display");
 const empty = document.querySelector(".empty");
 const priceCount = document.querySelector(".price-count");
 const total = document.querySelector(".total");
+const orderSummary = document.querySelector(".order-summary");
+const checkoutBtn = document.querySelector(".checkout-button");
+const deleteProducts = document.querySelector(".delete-icon");
 
 let counter = 0;
 let cartItems = 0;
@@ -26,9 +29,28 @@ closeIcon.addEventListener("click", () => {
   overlay.style.display = "none";
 });
 
+deleteProducts.addEventListener("click", () => {
+  cartItems = 0;
+  orderSummary.style.display = "none";
+  checkoutBtn.style.display = "none";
+  empty.style.display = "flex";
+  cartProducts.style.display = "none";
+  updateCart();
+});
+
 const updateCart = () => {
   priceCount.textContent = `$125.00 x ${cartItems}`;
   total.textContent = `$${(cartItems * 125).toFixed(2)}`;
+
+  if (cartItems === 0) {
+    orderSummary.style.display = "none";
+    checkoutBtn.style.display = "none";
+    empty.style.display = "flex";
+  } else {
+    orderSummary.style.display = "flex";
+    checkoutBtn.style.display = "block";
+    empty.style.display = "none";
+  }
 };
 
 plus.addEventListener("click", () => {
