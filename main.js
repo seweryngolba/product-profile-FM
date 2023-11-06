@@ -9,6 +9,10 @@ const addBtn = document.querySelector(".add-button");
 const cart = document.querySelector(".cart");
 const cartProducts = document.querySelector(".cart-products");
 const cartDisplay = document.querySelector(".cart-display");
+const empty = document.querySelector(".empty");
+
+let counter = 0;
+let cartItems = 0;
 
 hamburgerMenu.addEventListener("click", () => {
   mobileMenu.style.display = "flex";
@@ -19,8 +23,6 @@ closeIcon.addEventListener("click", () => {
   mobileMenu.style.display = "none";
   overlay.style.display = "none";
 });
-
-let counter = 0;
 
 plus.addEventListener("click", () => {
   counter++;
@@ -38,8 +40,9 @@ addBtn.addEventListener("click", () => {
   if (counter === 0) {
     cartProducts.style.display = "none";
   } else {
+    cartItems += counter;
     cartProducts.style.display = "block";
-    cartProducts.textContent = counter;
+    cartProducts.textContent = cartItems;
   }
 });
 
