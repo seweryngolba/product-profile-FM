@@ -88,6 +88,11 @@ body {
   width: 375px;
   height: 280px;
   object-fit: cover;
+}
+
+.swiper {
+  width: 375px;
+  height: 280px;
   position: relative;
 }
 
@@ -110,12 +115,12 @@ body {
 
 .previous-image {
   left: 10px;
-  top: 200px;
+  top: 130px;
 }
 
 .next-image {
   right: 10px;
-  top: 200px;
+  top: 130px;
 }
 
 .product-details {

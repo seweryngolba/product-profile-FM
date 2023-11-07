@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend Mentor | E-commerce product page | Seweryn Golba</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <nav class="navigation">
@@ -69,15 +73,40 @@
       </div>
     </nav>
     <div class="product-section">
-      <div class="product-image">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              class="photo-product"
+              src="images/image-product-1.jpg"
+              alt="image 1"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="photo-product"
+              src="images/image-product-2.jpg"
+              alt="image 2"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="photo-product"
+              src="images/image-product-3.jpg"
+              alt="image 3"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              class="photo-product"
+              src="images/image-product-4.jpg"
+              alt="image 4"
+            />
+          </div>
+        </div>
         <div class="previous-image">
           <img class="previous" src="images/icon-previous.svg" alt="previous" />
         </div>
-        <img
-          class="photo-product"
-          src="images/image-product-1.jpg"
-          alt="image 1"
-        />
         <div class="next-image">
           <img src="images/icon-next.svg" alt="next" />
         </div>
@@ -113,6 +142,7 @@
     </div>
 
     <div class="overlay"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
